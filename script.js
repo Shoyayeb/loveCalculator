@@ -1,15 +1,13 @@
 var yourName = prompt(`Enter your name:`);
 var lovedPersonName = prompt(`Enter his/her name:`);
-document.querySelector("h1").innerHTML = "Hello, " + yourName;
+
 var lovecalc = Math.random() * 100;
 var lovecalc = Math.floor(lovecalc) + 1;
-if (yourName.length <= 2) {
-  alert(`Enter a valid name`);
-  window.location.reload();
-} else if (lovedPersonName.length <= 2) {
+if (yourName.length <= 2 || lovedPersonName.length <= 2) {
   alert(`Enter a valid name`);
   window.location.reload();
 } else {
+  document.querySelector("h1").innerHTML = "Hello, " + yourName;
   if (lovecalc <= 10) {
     alert(`You 2 are like oil and water`);
     alert(`because its only ` + lovecalc + ` %`);
@@ -43,7 +41,7 @@ if (yourName.length <= 2) {
     alert(`There are some possibility but not sure.Work Hard`);
     alert(`because its ` + lovecalc + ` %`);
     document.getElementById("leadtext").innerHTML =
-      `The chance of a relationship working out between ` +yourName+
+      `The chance of a relationship working out between ` + yourName +
       ` and ` +
       lovedPersonName +
       ` is not very big, but a relationship is very well possible, if the two of you really want it to, and are prepared to make some sacrifices for it. You'll have to spend a lot of quality time together. You must be aware of the fact that this relationship might not work out at all, no matter how much time you invest in it.`;
@@ -54,7 +52,6 @@ if (yourName.length <= 2) {
     );
     alert(`because your love possibility is ` + lovecalc + "%");
     document.getElementById("leadtext").innerHTML =
-      `Dr. Love thinks that a relationship between `+yourName+ ` and `+lovedPersonName+` has a very good chance of being successful, but this doesn't mean that you don't have to work on the relationship. Remember that every relationship needs spending time together, talking with each other etc.`;
+      `Dr. Love thinks that a relationship between ` + yourName + ` and ` + lovedPersonName + ` has a very good chance of being successful, but this doesn't mean that you don't have to work on the relationship. Remember that every relationship needs spending time together, talking with each other etc.`;
   }
 }
-
